@@ -1,9 +1,15 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <test msg="Welcome to Your Vue.js App"/>
-    <!-- {{smg}} -->
-  </div>
+    <div id="app">
+        <nav>
+            <router-link to="/">Home</router-link>
+            <router-link to="/about">about</router-link>
+        </nav>
+   
+        <!-- <test msg="Welcome to Your Vue.js App"/> -->
+
+        <!-- {{smg}} -->
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
@@ -31,4 +37,18 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+nav {
+  padding: 20px 20px 20px 0;
+}
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 15px;
+  background: #ff8a00;
+}
+
 </style>

@@ -2,6 +2,9 @@
     <div class="hello">
         <h1>{{ msg }}</h1>
         
+
+        <p>翻转: "{{ reversedMessage }}"</p>
+
         <input type="text" v-model="name"/>
         <button v-on:click="changeName" v-bind:disabled="btnState">add</button>
         <!-- {{btnState ? 'The button is disabled':' The button is able'}} -->
@@ -32,10 +35,13 @@ export default {
             ]
         }
     },
-    computed:{
-
+    computed:{ // dom 加载后立刻执行
+        reversedMessage: function () {
+            // `this` 指向 vm 实例
+            return this.name.split('').reverse().join('')
+        }
     },
-    methods:{
+    methods:{ // 需要出发执行
         changeName(){
             //this.btnState = !this.btnState;
             //this.name = this.name+'傻逼';
