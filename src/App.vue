@@ -3,6 +3,7 @@
         <nav>
             <router-link to="/">Home</router-link>
             <router-link to="/about">about</router-link>
+             <router-link to="/aes">Aes 加密解密</router-link>
         </nav>
    
         <!-- <test msg="Welcome to Your Vue.js App"/> -->
